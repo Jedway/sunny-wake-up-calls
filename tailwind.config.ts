@@ -1,24 +1,55 @@
 import type { Config } from "tailwindcss";
 
 export default {
-	darkMode: ["class"],
-	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
-	],
-	prefix: "",
-	theme: {
-		container: {
-			center: true,
-			padding: '2rem',
-			screens: {
-				'2xl': '1400px'
-			}
-		},
-		extend: {
-			colors: {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px'
+      }
+    },
+    extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        // Catppuccin Macchiato colors
+        macchiato: {
+          rosewater: '#f4dbd6',
+          flamingo: '#f0c6c6',
+          pink: '#f5bde6',
+          mauve: '#c6a0f6',
+          red: '#ed8796',
+          maroon: '#ee99a0',
+          peach: '#f5a97f',
+          yellow: '#eed49f',
+          green: '#a6da95',
+          teal: '#8bd5ca',
+          blue: '#8aadf4',
+          sky: '#91d7e3',
+          lavender: '#b7bdf8',
+          text: '#cad3f5',
+          subtext1: '#b8c0e0',
+          subtext0: '#a5adcb',
+          overlay2: '#939ab7',
+          overlay1: '#8087a2',
+          overlay0: '#6e738d',
+          surface2: '#5b6078',
+          surface1: '#494d64',
+          surface0: '#363a4f',
+          base: '#24273a',
+          mantle: '#1e2030',
+          crust: '#181926',
+        },
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -62,7 +93,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
-			},
+      },
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -90,7 +121,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
+    }
+  },
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
