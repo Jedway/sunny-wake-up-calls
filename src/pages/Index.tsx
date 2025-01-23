@@ -1,5 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 
 const paragraphs = [
   {
@@ -53,10 +54,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-macchiato-base font-inter">
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center bg-macchiato-mantle">
+      <section className="h-screen flex items-center justify-center bg-macchiato-mantle relative">
         <h1 className="text-6xl md:text-8xl font-bold text-macchiato-text text-center px-4">
           Happy Birthday Baby
         </h1>
+        
+        {/* Floating Pill */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="flex items-center gap-2 bg-macchiato-surface0 text-macchiato-text px-4 py-2 rounded-full shadow-lg">
+            <span className="text-sm font-medium">Scroll down</span>
+            <ChevronDown className="w-4 h-4" />
+          </div>
+        </div>
       </section>
 
       {/* Content Sections */}
