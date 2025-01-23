@@ -55,7 +55,7 @@ const Index = () => {
     <div className="min-h-screen bg-macchiato-base font-inter">
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center bg-macchiato-mantle relative">
-        <h1 className="text-6xl md:text-8xl font-bold text-macchiato-text text-center px-4">
+        <h1 className="text-6xl md:text-8xl font-bold text-center px-4 bg-gradient-to-r from-macchiato-mauve via-macchiato-pink to-macchiato-lavender bg-clip-text text-transparent animate-gradient-x drop-shadow-[0_0_15px_rgba(198,160,246,0.3)]">
           Happy Birthday Baby
         </h1>
         
@@ -66,6 +66,13 @@ const Index = () => {
             <ChevronDown className="w-4 h-4" />
           </div>
         </div>
+      </section>
+
+      {/* Intro Paragraph */}
+      <section className="min-h-screen flex items-center justify-center bg-macchiato-surface0 px-4 py-16">
+        <p className="text-macchiato-text text-xl md:text-2xl leading-relaxed max-w-4xl text-center">
+          Today is a special day, a celebration of you and all the joy you bring to this world. As we embark on this journey through memories and moments we've shared, know that each word, each image, and each sentiment comes straight from the heart. Let these pages be a testament to the love, laughter, and light you bring into my life every single day.
+        </p>
       </section>
 
       {/* Content Sections */}
